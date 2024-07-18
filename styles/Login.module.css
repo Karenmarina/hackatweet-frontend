@@ -45,7 +45,7 @@
 
 .h2 {
     font-size: 30px;
-    font-family: "mont-heavy";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 40vw;
     margin-left: 30px;
     color: white;
@@ -53,7 +53,7 @@
 
 .h3 {
     font-size: 16px;
-    font-family: "mont-heavy";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 40vw;
     margin-left: 30px;
     color: white;
@@ -61,6 +61,7 @@
 
 .buttonSignUp {
     margin-left: 30px;
+    margin-bottom: 10px;
     width: 200px;
     height: 40px;
     align-items: center;
