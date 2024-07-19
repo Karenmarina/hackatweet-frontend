@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
 import styles from "../styles/Signup.module.css";
+import Image from "next/image";
 
 function Signup() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.value);
 
   const [signupFirstname, setSignupFirstname] = useState("");
   const [signupUsername, setSignupUsername] = useState("");
@@ -24,7 +24,13 @@ function Signup() {
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {
-          dispatch(login({ username: signupUsername, token: data.token }));
+          dispatch(
+            login({
+              firstname: signupFirstname,
+              username: signupUsername,
+              token: data.token,
+            })
+          );
           // Le code en dessous c'est pour vider les champs après création de compte
           setSignupFirstname("");
           setSignupUsername("");
@@ -35,14 +41,14 @@ function Signup() {
 
   return (
     <div className={styles.signUpContainer}>
-      <Image src="/logo.png" alt="Logo" width={200} height={200} />
+      <Image src="/logotwitter.png" alt="logotwitter" width={80} height={80} />
       <h2>Create your Hackatweet account</h2>
       <input
         type="text"
         placeholder="Firstname"
-        id="signupUsername"
-        onChange={(e) => setSignupUsername(e.target.value)}
-        value={signupUsername}
+        id="signupFirstname"
+        onChange={(e) => setSignupFirstname(e.target.value)}
+        value={signupFirstname}
       />
       <input
         type="text"
