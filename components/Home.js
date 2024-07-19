@@ -24,7 +24,7 @@ function Home() {
         <div className={styles.containerCenter}>
           <div className={styles.inputContainer}>
             <h1 className={styles.h1}>Home</h1>
-            {/* //{Tweet}// */}
+            {/* {Tweet} */}
           </div>
           <div className={styles.lastTweetContainer}>
             {/* {LastTweet} */}

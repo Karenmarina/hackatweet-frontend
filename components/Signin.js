@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
-import styles from "../styles/Signup.module.css";
+import styles from "../styles/Signin.module.css";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
-function Signup() {
+function Signin() {
   const dispatch = useDispatch();
+  const router = useRouter()
 
   const [signinUsername, setSigninUsername] = useState("");
   const [signinPassword, setSigninPassword] = useState("");
 
   const handleConnection = () => {
-    fetch("http://localhost:3000/users/signup", {
+    fetch("http://localhost:3000/users/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -26,12 +28,15 @@ function Signup() {
             login({
               username: signinUsername,
               token: data.token,
+              
             })
           );
+          ;
           // Le code en dessous c'est pour vider les champs après création de compte
 
           setSigninUsername("");
           setSigninPassword("");
+          router.push('/homepage')
         }
       });
   };
@@ -62,4 +67,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Signin;

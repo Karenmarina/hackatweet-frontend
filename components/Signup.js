@@ -3,9 +3,14 @@ import { useDispatch } from "react-redux";
 import { login } from "../reducers/user";
 import styles from "../styles/Signup.module.css";
 import Image from "next/image";
+import { useRouter } from 'next/router';
+
 
 function Signup() {
   const dispatch = useDispatch();
+  const router = useRouter()
+
+
 
   const [signupFirstname, setSignupFirstname] = useState("");
   const [signupUsername, setSignupUsername] = useState("");
@@ -35,6 +40,7 @@ function Signup() {
           setSignupFirstname("");
           setSignupUsername("");
           setSignupPassword("");
+          router.push('/homepage')
         }
       });
   };

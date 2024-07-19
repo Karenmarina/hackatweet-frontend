@@ -2,18 +2,18 @@
 import { useState } from "react";
 import { Modal } from "antd";
 import Signup from "./Signup";
-import Signin from "./Signup";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Signin from "./Signin";
 // Ajout Manuel
 import styles from "../styles/Login.module.css";
 import Image from "next/image";
 
 function Login() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const showModal = () => {
-    setIsModalVisible(!isModalVisible);
-  };
+  const [showSignIn, setShowSignIn] = useState(false); 
+  const [showSignUp, setShowSignUp] = useState(false); 
+
+  const openSignInModal = () => { setShowSignIn(true); }; 
+  const openSignUpModal = () => { setShowSignUp(true); }; 
+  const closeModal = () => { setShowSignIn(false); setShowSignUp(false); }; 
 
   return (
     <div>
@@ -39,48 +39,48 @@ function Login() {
           <h1 className={styles.h1}>See what's happening</h1>
           <h2 className={styles.h2}>Join Hackatweet today.</h2>
 
-          <button onClick={showModal} className={styles.buttonSignUp}>
+          <button onClick={openSignUpModal} className={styles.buttonSignUp}>
             Sign up
           </button>
 
-          {isModalVisible && (
+          {openSignUpModal && (
             <div id="react-modals">
               <Modal
                 getContainer="#react-modals"
                 className={styles.modal}
-                visible={isModalVisible}
+                visible={showSignUp}
                 closable={false}
                 footer={null}
-                onCancel={showModal}
+                onCancel={closeModal}
               >
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                   onClick={showModal}
                   className={styles.icon}
                   icon={faXmark}
-                />
+                /> */}
                 <Signup />
               </Modal>
             </div>
           )}
           <h3 className={styles.h3}>Already have an account ?</h3>
-          <button onClick={showModal} className={styles.buttonSignIn}>
+          <button onClick={openSignInModal} className={styles.buttonSignIn}>
             Sign In
           </button>
-          {isModalVisible && (
+          {openSignInModal && (
             <div id="react-modals2">
               <Modal
                 getContainer="#react-modals2"
                 className={styles.modal2}
-                visible={isModalVisible}
+                visible={showSignIn}
                 closable={false}
                 footer={null}
-                onCancel={showModal}
+                onCancel={closeModal}
               >
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                   onClick={showModal}
                   className={styles.icon}
                   icon={faXmark}
-                />
+                /> */}
                 <Signin />
               </Modal>
             </div>
