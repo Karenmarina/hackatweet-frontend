@@ -1,22 +1,82 @@
 .main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.containerLeft {
+  background-color: rgb(37, 36, 46);
+  width: 25vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+
+}
+
+.containerCenter {
+  background-color: rgb(37, 36, 46);
+  width: 50vw;
+  height: 100vh;
+  border-left: 1px solid rgb(124, 124, 124);
+  border-right: 1px solid rgb(124, 124, 124);
+  display: flex;
+  flex-direction: column;
+}
+
+.containerRight {
+  background-color: rgb(37, 36, 46);
+  width: 25vw;
+  height: 100vh;
+}
+
+.logoContainer {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.userContainer {
+  margin-bottom: 20px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.userInfos {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.bodyBold {
+  font-weight: bolder;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.inputContainer {
+  height: 30vh;
+  border-bottom: 1px solid rgb(124, 124, 124);
+}
+.lastTweetContainer {
+  height: 70vh;
+}
+
+.h1 {
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 40vw;
+  margin-left: 30px;
+  color: white;
 }

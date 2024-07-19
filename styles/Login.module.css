@@ -3,10 +3,7 @@
     src: url("/hackatweet-frontend/public/Mont-HeavyDEMO.otf");
 }
 
-
-
 .main {
-    border: 1px solid black;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,7 +15,6 @@
 }
 
 .containerLeft {
-    border: 1px solid rgb(197, 39, 39);
     background-color: rgb(37, 36, 46);
     width: 40vw;
     height: 100vh;
@@ -28,7 +24,6 @@
 }
 
 .containerRight {
-    border: 1px solid rgb(39, 165, 197);
     background-color: rgb(37, 36, 46);
     width: 60vw;
     height: 100vh;
@@ -70,7 +65,7 @@
     border-radius: 100px;
     color: #ffffff;
     cursor: pointer;
-    font-family: Roboto;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
@@ -108,7 +103,7 @@
     border-radius: 100px;
     color: #6eabe7;
     cursor: pointer;
-    font-family: Roboto;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
