@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 220px;
+	margin: 20px;
+    color: white;
+}
+
+.userContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.userIcon {
+    margin-right: 10px;
+}
+
+
+.bodyBold {
+    font-weight: bolder;
+  }

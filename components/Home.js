@@ -1,7 +1,11 @@
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
+import LastTweets from "./LastTweets";
+import { useEffect, useState } from 'react';
+
 
 function Home() {
+
   return (
     <div>
       <main className={styles.main}>
@@ -27,7 +31,7 @@ function Home() {
             {/* {Tweet} */}
           </div>
           <div className={styles.lastTweetContainer}>
-            {/* {LastTweet} */}
+            <LastTweets />
           </div>
 
         </div>
